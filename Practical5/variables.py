@@ -6,7 +6,7 @@ This is a temporary script file.
 """
 a=123
 b=123456
-c=b%7
+c=b/7
 print(c) 
 d=c/11
 e=d/13
