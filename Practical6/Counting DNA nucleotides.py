@@ -8,6 +8,7 @@ Created on Wed Mar 18 11:35:02 2020
 import matplotlib.pyplot as plt
 #put the DNA string in a string variable
 s="ATGCTTCAGAAAGGTCTTACG"
+n=len(s)
 #set the number of each type of nucleotides to 0
 numA=0
 numT=0
@@ -15,7 +16,7 @@ numC=0
 numG=0
 i=0
 #the length of the DNA string is 21, count every nucleotide
-for i in range(0,21):
+for i in range(0,n):
     if s[i]=="A":
         numA+=1
     elif s[i]=="T":
