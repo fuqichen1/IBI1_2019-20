@@ -1,0 +1,4 @@
+question:  How have new cases and total cases developed over time in Spain? 
+the line number: 51-62
+At the begining of the coronavirus outbreak, the numbers of new cases and total cases in spain rised slowly. But after 2020/3/9, there was sharp increase of the new cases and total cases. At the end of the plot (on 2020/3/29),
+we can see there is a little decrease of the number of the new cases. 
