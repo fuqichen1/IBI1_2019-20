@@ -8,7 +8,10 @@ Created on Wed Mar 18 11:35:02 2020
 import matplotlib.pyplot as plt
 #put the DNA string in a string variable
 s="ATGCTTCAGAAAGGTCTTACG"
+<<<<<<< HEAD
 #use a variable to store the length of the string
+=======
+>>>>>>> master
 n=len(s)
 #set the number of each type of nucleotides to 0
 numA=0
