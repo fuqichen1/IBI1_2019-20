@@ -10,14 +10,12 @@ Created on Wed Mar 11 22:32:20 2020
 n=102
 print(n)
 #Repeat until n is equal to 1:
-while n != 1:
-#     If n is even
-      if n%2 == 0:
-#        n will be divided by 2. 
+while n != 1: 
+#     If n is even, n will be divided by 2.
+      if n%2 == 0:   
          n=n/2
-#     if n is odd
-      else:
-#        multiplying by 3 and adding 1
+#     if n is odd, multiplying by 3 and adding 1
+      else:     
          n=n*3+1
-#     print n
+#     output the result
       print(n)    

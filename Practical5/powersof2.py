@@ -18,7 +18,8 @@ while x!=0:
           n=n-1
        #if current n power of 2 is smaller than x, that means we find the n
        else:
-          #this if statement is to make sure there is no spare "+" appearing at the end of the string s
+          #this if statement is to record the result and 
+          #make sure there is no spare "+" appearing at the end of the string
           if x%2==0 and n!=1:
               s=s+"2**"+str(n)+" + "
           elif x%2==1 and n!=0:
@@ -27,7 +28,7 @@ while x!=0:
               s=s+"2**"+str(n)
           #minus 2**n to find the next n
           x=x-2**n
-#print the result
+#output the result
 print(s)
         
         

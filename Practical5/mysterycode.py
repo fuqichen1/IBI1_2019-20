@@ -6,7 +6,7 @@ Created on Wed Mar 11 23:18:21 2020
 """
 
 # What does this piece of code do?
-# Answer: find a prime number in the range of 2-100 or get the result of 1 (the number is randomly generated)
+# Answer: find a prime number in the range of 1-100 (the number is randomly generated)
 
 # Import libraries
 # randint allows drawing a random number, 
