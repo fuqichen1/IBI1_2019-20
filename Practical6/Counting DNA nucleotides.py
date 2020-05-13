@@ -8,18 +8,14 @@ Created on Wed Mar 18 11:35:02 2020
 import matplotlib.pyplot as plt
 #put the DNA string in a string variable
 s="ATGCTTCAGAAAGGTCTTACG"
-<<<<<<< HEAD
 #use a variable to store the length of the string
-=======
->>>>>>> master
 n=len(s)
 #set the number of each type of nucleotides to 0
 numA=0
 numT=0
 numC=0
 numG=0
-i=0
-#the length of the DNA string is 21, count every nucleotide
+#the length of the DNA string is n, count every nucleotide
 for i in range(0,n):
     if s[i]=="A":
         numA+=1
@@ -29,7 +25,6 @@ for i in range(0,n):
         numC+=1
     else:
         numG+=1
-    i+=1
 #create the frequency dictionary
 frequency={'A':numA,'T':numT,'C':numC,'G':numG}
 #print the frequency dictionary
@@ -46,4 +41,5 @@ plt.pie(sizes,explode=explode,labels=labels,autopct='%1.1f%%',
 plt.axis('equal')
 #name the title of the pie chart
 plt.title('pie of the DNA four nucleotides')
+#output the plot
 plt.show()

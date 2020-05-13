@@ -10,7 +10,7 @@ gene_lengths=[9410,3944141,4442,105338,19149,76779,126550,36296,842,15981]
 gene_lengths_copy=gene_lengths[:]
 #sort the copied list
 gene_lengths_copy.sort()
-#the first one is the smallest, the last one is the biggest
+#get the value of the biggest and smallest gene lengths
 max=gene_lengths_copy[9]
 min=gene_lengths_copy[0]
 #remove the longest and shortest gene lengths
