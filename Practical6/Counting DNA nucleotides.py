@@ -27,6 +27,7 @@ for i in range(0,n):
     else:
         numG+=1
 #The above counting ATCG from the raw DNA sequence is optional according to the guidance. 
+#I still keep it since it contains my correction according the formative feedback
 
 #feel free to change the values for the counts of ATCG here
 #numA=
