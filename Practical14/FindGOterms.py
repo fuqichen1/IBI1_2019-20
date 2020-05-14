@@ -4,6 +4,8 @@ Created on Mon May 11 19:22:06 2020
 
 @author: 17426
 """
+#The code takes about 30-40 seconds to run, please be patient! Thank you very much!
+
 #import python libraries
 import pandas as pd
 import xml.dom.minidom
@@ -71,6 +73,7 @@ for i in id_result:
                     continu += 1
                     m.append (j)
         n = m[:]
+    #record childnodes
     childnodes.append(count)
 
 #add the number of the childnodes to the dataframe

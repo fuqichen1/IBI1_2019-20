@@ -11,8 +11,9 @@ Created on Wed May 13 19:19:23 2020
 #merge the elements of every arrangement in turn until we get 24
 
 #import python libraries
-import itertools
-import fractions #The outcome of fractions.Fraction(m,n) is m/n,since there are cases like 7*(2+10/7)=24
+import itertools #references: https://docs.python.org/3/library/itertools.html
+import fractions #references: https://docs.python.org/3/library/fractions.html
+#The outcome of fractions.Fraction(m,n) is m/n,since there are cases like 7*(2+10/7)=24
 import re
 
 m=True
@@ -43,7 +44,7 @@ def merge(a,b):
         z=[a+b,b-a,a*b]
     return z
 
-def enumerate(i):
+def enumerat(i):
     '''
     For a given order of numbers, all possible operations are performed
     The function returns the operation results (merged)
@@ -64,18 +65,18 @@ list1_time = 0
 recursion_time = 0
 if m==True:
  for i in range(N,1,-1):        
-    all_sequence = list(itertools.permutations(a_int, i)) #Permutation
+    all_sequence = list(itertools.permutations(a_int, i)) #generate i-length tuples, all possible orderings
     list1 = []
     for i in range(0, len(all_sequence)): #repeat 'enumeration' for every order of inputted numbers
       if m==True:
-        list1 += enumerate(i)
+        list1 += enumerat(i)
         list1_time = len(list1) # The exact recursion time in this enumeration (The recursion time is bit higher since the merge is not immediately stopped after we get 24)
-        if 24 in list1: # When the right outcome 24 is found, exit the program and output the exact recursion time.
+        if 24 in list1: # When the right outcome 24 is found, exit the program and output the recursion time.
             print('Yes')
             print('recursion times: '+ str(recursion_time + list1_time) + '\n') # The exact recursion time = recursion time of last for-loop + the exact list1_time
             m=False
         recursion_time += len(list1) # Record the exact whole recursion time 
-if m==True: print('No\nrecursion times: '+ str(recursion_time)) # When there is no outcome of 24, output the failed message. 
+if m==True: print('No'+'\n'+'recursion times: '+ str(recursion_time)) # When there is no outcome of 24, output the failed message. 
 
 #explaination about the recursive time
 #note that the code check whether we can use all input numbers (n) to get 24, and then n-1 numbers and then n-2 and so on. 

@@ -41,7 +41,7 @@ plt.plot(list(range(time+1)), s,label='Susceptible')
 plt.plot(list(range(time+1)), i,label='Infected')
 plt.plot(list(range(time+1)), r,label='Recovered')
 legend = plt.legend(loc='upper right', shadow=False)
-plt.show()
 #save figure
 plt.savefig('SIR',type='png')
+plt.show()
 plt.close()

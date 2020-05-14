@@ -47,4 +47,5 @@ for a in range(0,11):
    plt.plot(list(range(time+1)), i,label=str(a*10)+'%')
 legend = plt.legend(loc='upper right', shadow=False)
 plt.savefig('SIR_vaccination',type='png')
+plt.show()
 plt.close()
