@@ -22,5 +22,7 @@ for i in range(0,n):
     else:
         output=output+'C'
     i+=1
+#reverse the sequence
+output=output[::-1]
 #output the result
 print(output)
