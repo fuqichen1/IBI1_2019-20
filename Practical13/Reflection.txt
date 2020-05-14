@@ -1,0 +1,4 @@
+The practical is a little bit difficult. I modified the code many times and finally got the correct output. The mistakes were often caused by too many loops which made me confused. 
+The difficult point is that I have never used np.random.choice() and 2-dimensional Narray before and it took me some time to use it effectively. 
+But the practical is quite fun. I learned how to make probabilitic model in python. Python is really a good tool to make figures. 
+The most important thing I learned in my point of view was using python to generate probabilistic model and also the skill of using np.random.choice(). 
