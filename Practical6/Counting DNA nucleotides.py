@@ -6,6 +6,7 @@ Created on Wed Mar 18 11:35:02 2020
 """
 #import matplotlib
 import matplotlib.pyplot as plt
+
 #put the DNA string in a string variable
 s="ATGCTTCAGAAAGGTCTTACG"
 #use a variable to store the length of the string
@@ -25,7 +26,14 @@ for i in range(0,n):
         numC+=1
     else:
         numG+=1
-#create the frequency dictionary
+#The above counting ATCG from the raw DNA sequence is optional according to the guidance. 
+
+#feel free to change the values for the counts of ATCG here
+#numA=
+#numT=
+#numC=
+#numG=
+#create the frequency dictionary, 
 frequency={'A':numA,'T':numT,'C':numC,'G':numG}
 #print the frequency dictionary
 print(frequency)
@@ -40,6 +48,7 @@ plt.pie(sizes,explode=explode,labels=labels,autopct='%1.1f%%',
 #equal aspect ratio ensures that pie is drawn as a circle
 plt.axis('equal')
 #name the title of the pie chart
-plt.title('pie of the DNA four nucleotides')
+plt.title('pie of the four DNA nucleotides')
 #output the plot
 plt.show()
+plt.close()
