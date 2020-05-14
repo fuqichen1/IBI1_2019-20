@@ -1,0 +1,33 @@
+My response to the formative feedback: 
+Practical 4
+Feedback: Commit messages could be more informative.
+Response: I changed "change 1" to "add my name in the introductions.txt", and also changed "change 2" to "add the things that I like in the thingslike.txt"
+I did this on 2 May. (There is sceenshot (Practical 4 commit message.png) in the same directory of this reflection file which shows the changes of commit message.)
+However, the initial "change 1" and "change 2" commits are still there. They cannot be deleted. 
+
+Practical 5
+Feedback: c should be the output of b divided by 7, rather than the remainder. 
+In mysterycode.py you should mention that the prime number generated is random (different each time you run the code) and must fall within a range - what is this range?
+Response: I have corrected the first mistake by changing the % to /. For the second mistake, I have added "The function generates numbers randomly". 
+The mistake of range is caused by the misunderstanding of whether 1 is a prime number or not (I thought that 1 is not a prime number). Now I believe that 1 is a prime number to avoid confusion and changed the range to 1-100 (include both 1 and 100)
+
+Practical 6
+Feedback: On line 17, you have hardcoded that only a DNA string of length 21 is accepted. 
+Can you change it to accept a string of any length?
+Response: I have assigned 21 to a variable (n=len(s)) changed all 21 to n. 
+
+My thoughts as I worked through the practicals: 
+Overall, practicals were great changes for me to consolidate the knowledge that I learned that week. 
+I also learned that python was a great tool to read files, select what we what, analyze sequences as well as make plots. 
+
+Practical 4-7, 10 are relatively easy and did not take much time for me to complete. 
+
+I found practical 8 a bit tricky since this was my first time to write regular expression. I got more familiar with the regular expression by reviewing slides. 
+
+For practical 13, it took me a while to understand the model. 
+
+The difficult practicals are practical 11 and 14 (childnodes). I got puzzled when working with so many loops. 
+However, I made the whole task clearer by dividing them into small tasks. And first solve small tasks (e.g.: defind a function to merge numbers). 
+And then combine them together. 
+
+
