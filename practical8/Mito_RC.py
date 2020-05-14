@@ -29,6 +29,7 @@ for line in file:
     if a==True and not(line.startswith('>')):
        line=line[:-1]
        length=length+len(line)
+       #get reverse complementary sequence
        line1=line.replace('A','t').replace('T','a').replace('C','g').replace('G','c')
        line1=line1.upper()
        gene=gene+line1
