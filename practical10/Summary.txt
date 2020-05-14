@@ -1,0 +1,10 @@
+The percentage identity: 
+human-mouse: 89.64%
+human-random: 5.41%
+mouse-random: 5.86%
+Score: 
+human-mouse: 1091
+human-random: -250
+mouse-random: -250
+The percentage identity and the score of human-mouse are much higher than those of human-random and mouse-random. 
+The similarity of human and mouse sequences is much higher than that of human and random sequences or that of mouse and random sequence. 
