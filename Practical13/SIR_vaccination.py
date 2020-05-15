@@ -12,11 +12,12 @@ plt.xlabel('time')
 plt.ylabel('number of people')
 plt.title('SIR model with different vaccination rates')
 N=10000  #population size
+#for every percentage of vaccinated people
 for a in range(0,11):  
    V=int(N*a/10)   #vaccinated people
    S=9999-V
    I=1
-   R=0
+   R=V
    #avoid S to be negative when a reaches 10
    if S<0:
        S=0
@@ -28,7 +29,7 @@ for a in range(0,11):
    i=[I]
    r=[R]
    time=1000
-   
+   #loop 1000 times
    for b in range(0,time):
        #calculate current beta
        curr_beta=beta*I/N
