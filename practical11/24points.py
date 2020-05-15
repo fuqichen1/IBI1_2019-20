@@ -65,17 +65,18 @@ def enumerat(i):
 list1_time = 0
 recursion_time = 0
 if m==True:
- for i in range(N,1,-1):        
+ for i in range(N,1,-1):  #Complexity estimation: the first loop      
     all_sequence = list(itertools.permutations(a_int, i)) #generate i-length tuples, all possible orderings
     list1 = []
+    #Complexity estimation: the second loop
     for i in range(0, len(all_sequence)): #repeat 'enumeration' for every order of inputted numbers
       if m==True:
-        list1 += enumerat(i)
+        list1 += enumerat(i)    # Complexity estimation: the third loop (in the enumerat function)
         list1_time = len(list1) # The exact recursion time in this enumeration (The recursion time is bit higher since the merge is not immediately stopped after we get 24)
         if 24 in list1: # When the right outcome 24 is found, exit the program and output the recursion time.
             print('Yes')
             print('recursion times: '+ str(recursion_time + list1_time) + '\n') # The exact recursion time = recursion time of last for-loop + the exact list1_time
-            m=False
+            m=False  #label whether we need to continue merging and searching or not
         recursion_time += len(list1) # Record the exact whole recursion time 
 if m==True: print('No'+'\n'+'recursion times: '+ str(recursion_time)) # When there is no outcome of 24, output the failed message. 
 
@@ -85,13 +86,16 @@ if m==True: print('No'+'\n'+'recursion times: '+ str(recursion_time)) # When the
 #anather example: 10,10,4,4 recursive time is also quite big. Athough it looks easy (10+10+4=24), but the code first check whether we can use all the numbers (10*10-4)/4)
 
 #Complexity estimation:
-#The first loop (for i in range(N,1,-1)) is to code check whether we can use all input numbers (n) to get 24, and then n-1 numbers and then n-2 and so on. 
-#O(N-1) (N is the number of cards)
-#The second loop (for i in range(0, len(all_sequence)) is to merge every possible sequences. 
+#The first loop (for i in range(N,1,-1)) is to check whether we can use all input numbers (n) to get 24, and then n-1 numbers and then n-2 and so on. 
+#
+#The second loop (for i in range(0, len(all_sequence)) is to repeat 'enumeration' for every order of inputted numbers. 
 #if we use all numbers, the number of the possible sequences are N!
 #if we use N-1 numbers, the number of the possible sequences are still N!
 #if we use N-2 numbers, the number of the possible sequences are (CN2)(N-2)!
 #In conclusion, if we use n numbers, the number of the possible sequences are (CNn)(N-n)!
-#And then all possible sequences need to undergo merge process. All these terms need to be multipied by n-1. 
-#So we get (n-1)(CNn)((N-n)!). Keep the dominant terms, we get N!/n!
-#To sum up, the complexity is N!+N!/2!+'''+N!/(N-1)!+1. 
+#O((CNn)(N-n)!)=O(N!/n!)
+#
+#The third loop is all possible sequences undergo merge process. All these terms need to be multipied by n-1. 
+#O(n-1)
+#So we get (n-1)(N!/n!) for every n. 
+#To sum up, the complexity is (N-1)N!+(N-2)N!/2!+'''+2*N!/(N-1)!+1. 
