@@ -52,6 +52,7 @@ for term in terms:
 
 #count the childnode 
 childnodes = []
+continu=True
 for i in id_result:
     m = []
     count = 0
@@ -61,16 +62,17 @@ for i in id_result:
             count += 1
             m.append (j)
     n = m[:]
-    continu = count
+    if count>0:
+        continu = False
     #find childnode's childnode until no childnood is found
-    while continu != 0 :
+    while continu == False :
         m = []
-        continu = 0
+        continu = True
         for k in n:
             for j in dic:
                 if k in dic[j]:
                     count += 1
-                    continu += 1
+                    continu = False
                     m.append (j)
         n = m[:]
     #record childnodes
