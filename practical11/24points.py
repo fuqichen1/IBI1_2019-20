@@ -13,11 +13,10 @@ Created on Wed May 13 19:19:23 2020
 #import python libraries
 import itertools #references: https://docs.python.org/3/library/itertools.html
 import fractions #references: https://docs.python.org/3/library/fractions.html
-#The outcome of fractions.Fraction(m,n) is m/n,since there are cases like 7*(2+10/7)=24
 import re
 
 m=True
-s=input("Please input numbers to compute 24:(use ',' to divide them)")
+s=input("Please input numbers to compute 24(use ',' to divide them):")
 a=re.split(r'[\s,]+',s)   #a is a list which contains input numbers
 #cheak whether the input numbers are integer and in the range of 1-23
 a_int = [int(x) for x in a]
@@ -34,14 +33,16 @@ def merge(a,b):
     Compute with an operation of +,-,*,/
     The divisor cannot be zero
     '''
-    if a!=0 and b!=0:
+    if a!=0 and b!=0 and a>b:
+        z=[a+b,a-b,a*b,fractions.Fraction(a,b),fractions.Fraction(b,a)] #The outcome of fractions.Fraction(m,n) is m/n,since there are cases like 7*(2+10/7)=24
+    if a!=0 and b!=0 and a<=b:
         z=[a+b,b-a,a*b,fractions.Fraction(a,b),fractions.Fraction(b,a)] 
     if a==0 and b!=0:
-        z=[a+b,b-a,a*b,fractions.Fraction(a,b)]
+        z=[b,0]
     if a!=0 and b==0:
-        z=[a+b,b-a,a*b,fractions.Fraction(b,a)]
+        z=[a,0]
     if a==0 and b==0:
-        z=[a+b,b-a,a*b]
+        z=[0]
     return z
 
 def enumerat(i):
@@ -81,6 +82,7 @@ if m==True: print('No'+'\n'+'recursion times: '+ str(recursion_time)) # When the
 #explaination about the recursive time
 #note that the code check whether we can use all input numbers (n) to get 24, and then n-1 numbers and then n-2 and so on. 
 #for example, 2,12,1,1,1,1,1 recursive time is quite big. Although it looks easy (2*12=24), but the code first check whether we can use all the numbers (2*12*/1*/1*/1*/1*/1) to get 24. 
+#anather example: 10,10,4,4 recursive time is also quite big. Athough it looks easy (10+10+4=24), but the code first check whether we can use all the numbers (10*10-4)/4)
 
 #Complexity estimation:
 #The first loop (for i in range(N,1,-1)) is to code check whether we can use all input numbers (n) to get 24, and then n-1 numbers and then n-2 and so on. 
