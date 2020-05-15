@@ -99,3 +99,5 @@ if m==True: print('No'+'\n'+'recursion times: '+ str(recursion_time)) # When the
 #O(n-1)
 #So we get (n-1)(N!/n!) for every n. 
 #To sum up, the complexity is (N-1)N!+(N-2)N!/2!+'''+2*N!/(N-1)!+1. 
+
+#I discussed with other students when writing the code. 
